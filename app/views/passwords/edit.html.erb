@@ -1,12 +1,8 @@
-<h1>Sign up</h1>
+<h1>Edit password</h1>
 
-<%= form_with model: @user, url: sign_up_path do |form| %>
+<%= form_with model: Current.user, url: password_path do |form| %>
 <%= render partial: "shared/errors", locals: {form: form} %>
 
-<div class="mb-3">
-  <%= form.label :email, class: "form-label" %>
-  <%= form.text_field :email, class: "form-control", placeholder: "steve@apple.com" %>
-</div>
 <div class="mb-3">
   <%= form.label :password %>
   <%= form.password_field :password, class: "form-control", placeholder: "password" %>
@@ -17,6 +13,6 @@
 </div>
 
 <div class="mb-3">
-  <%= form.submit "Sign Up", class: "btn btn-primary" %>
+  <%= form.submit "Update Password", class: "btn btn-primary" %>
 </div>
 <% end %>
